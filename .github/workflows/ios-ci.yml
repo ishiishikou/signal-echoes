@@ -1,0 +1,88 @@
+name: iOS Recorder CI
+
+on:
+  push:
+    branches: [feat/m1-ios-recorder]
+    paths:
+      - 'apps/recorder-ios/**'
+      - '.github/workflows/ios-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/recorder-ios/**'
+      - '.github/workflows/ios-ci.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-recorder-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios-build-test:
+    runs-on: macos-26
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Select installed Xcode
+        run: |
+          set -euo pipefail
+          if [ -d /Applications/Xcode_26.5.app ]; then
+            echo "DEVELOPER_DIR=/Applications/Xcode_26.5.app/Contents/Developer" >> "$GITHUB_ENV"
+          elif [ -d /Applications/Xcode_26.6.app ]; then
+            echo "DEVELOPER_DIR=/Applications/Xcode_26.6.app/Contents/Developer" >> "$GITHUB_ENV"
+          fi
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: |
+          set -euo pipefail
+          cd apps/recorder-ios
+          xcodegen generate --spec project.yml
+          xcodebuild -version
+          xcodebuild -list -project SignalEchoes.xcodeproj
+      - name: Unsigned iOS simulator build
+        run: |
+          set -euo pipefail
+          xcodebuild build \
+            -project apps/recorder-ios/SignalEchoes.xcodeproj \
+            -scheme SignalEchoes \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet
+      - name: Unit tests on available simulator
+        run: |
+          set -euo pipefail
+          SIM_ID="$(xcrun simctl list -j devices available | python3 -c '
+          import json,sys
+          devices=json.load(sys.stdin)["devices"]
+          match=[d for group in devices.values() for d in group
+                 if d.get("isAvailable") and d.get("name","").startswith("iPhone")]
+          if not match: raise SystemExit("No available iPhone simulator")
+          print(match[0]["udid"])
+          ')"
+          xcodebuild test \
+            -project apps/recorder-ios/SignalEchoes.xcodeproj \
+            -scheme SignalEchoes \
+            -destination "platform=iOS Simulator,id=$SIM_ID" \
+            -parallel-testing-enabled NO \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet
+      - name: Verify Swift JSON against M0 strict schema
+        run: |
+          set -euo pipefail
+          swiftc apps/recorder-ios/SignalEchoes/Models.swift apps/recorder-ios/scripts/emit-sample.swift -o "$RUNNER_TEMP/emit-ios-session"
+          "$RUNNER_TEMP/emit-ios-session" > "$RUNNER_TEMP/ios-synthetic-session.json"
+          npm ci
+          npx tsx scripts/validate-ios-export.ts "$RUNNER_TEMP/ios-synthetic-session.json"
+      - name: Check no private signing/data files in tree
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -E '\.(p12|mobileprovision|p8|ipa)$|(^|/)(raw|measured|captures|private)/'; then
+            echo "::error::Restricted artifact present in repository"
+            exit 1
+          fi

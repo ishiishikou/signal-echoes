@@ -15,3 +15,15 @@ exports/
 *.log
 *.exit
 sol-advice*
+
+# iOS tool-generated artifacts
+apps/recorder-ios/SignalEchoes.xcodeproj/
+apps/recorder-ios/build/
+**/*.xcuserstate
+*.xcuserdata/
+*.xcarchive
+*.ipa
+*.p12
+*.p8
+*.mobileprovision
+.sol-m1*

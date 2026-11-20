@@ -1,0 +1,64 @@
+name: SignalEchoes
+options:
+  createIntermediateGroups: true
+  bundleIdPrefix: org.signalechoes
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "0.1.0"
+    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: "NO"
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+targets:
+  SignalEchoes:
+    type: application
+    platform: iOS
+    sources:
+      - path: SignalEchoes
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.signalechoes.recorder
+        SUPPORTS_MACCATALYST: "NO"
+        SWIFT_EMIT_LOC_STRINGS: "YES"
+    info:
+      path: SignalEchoes/Info.plist
+      properties:
+        CFBundleDisplayName: Signal Echoes
+        NSBluetoothAlwaysUsageDescription: "周囲のBluetooth LE信号の受信強度を短時間記録して可視化するために使用します。"
+        NSLocationWhenInUseUsageDescription: "ご自身の移動経路を端末内の相対座標で記録するために使用します。"
+        NSMotionUsageDescription: "歩行状態と歩数の変化を記録するために使用します。"
+        UIRequiresFullScreen: false
+        UIBackgroundModes: []
+        UILaunchScreen: {}
+        LSRequiresIPhoneOS: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+  SignalEchoesTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SignalEchoesTests
+    dependencies:
+      - target: SignalEchoes
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.signalechoes.recorder.tests
+        GENERATE_INFOPLIST_FILE: "YES"
+
+schemes:
+  SignalEchoes:
+    build:
+      targets:
+        SignalEchoes: all
+    test:
+      targets:
+        - SignalEchoesTests
