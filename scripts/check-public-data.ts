@@ -20,7 +20,7 @@ for(const v of manifest.fixtures){
 const candidates=execFileSync("git",["ls-files","--cached","--others","--exclude-standard"],{encoding:"utf8"}).trim().split("\n").filter(Boolean);
 for(const path of candidates){
  if(/(^|\/)\.env|\.p12$|\.ipa$|\.mobileprovision$|\.ndjson$|\.csv$|\.pem$|\.key$/i.test(path))failures.push("forbidden file: "+path);
- if(/\.json$/i.test(path)&&!path.startsWith("fixtures/synthetic/")&&!/(^|\/)(package(-lock)?|tsconfig)\.json$/.test(path))failures.push("unreviewed JSON: "+path);
+ if(/\.json$/i.test(path)&&!path.startsWith("fixtures/synthetic/")&&!/(^|\/)(package(-lock)?|tsconfig)\.json$/.test(path)&&path!=="apps/recorder-ios/SignalEchoes/Assets.xcassets/AppIcon.appiconset/Contents.json")failures.push("unreviewed JSON: "+path);
  if(path.startsWith("apps/viewer/public/")&&path.toLowerCase().endsWith(".json"))failures.push("published JSON: "+path);
  if(/raw|measured|private|captures|exports/i.test(path)&&!path.endsWith(".md"))failures.push("suspicious filename: "+path);
 }
