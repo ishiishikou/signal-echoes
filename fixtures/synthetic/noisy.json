@@ -1,0 +1,1485 @@
+{
+  "schema": "signal-echoes.session",
+  "version": 1,
+  "provenance": "synthetic",
+  "sessionId": "demo-noisy-001",
+  "durationMs": 60000,
+  "coordinateFrame": "local-east-up-south-m",
+  "seed": 37,
+  "capture": {
+    "mode": "synthetic",
+    "serviceFilter": "none",
+    "binMs": 1000,
+    "completion": "complete"
+  },
+  "observations": {
+    "ble": [
+      {
+        "tMs": 1000,
+        "traceId": "synthetic-spike",
+        "rssiMedianDbm": -94,
+        "sampleCount": 2,
+        "lastSeenMs": 900
+      },
+      {
+        "tMs": 2000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -54,
+        "sampleCount": 2,
+        "lastSeenMs": 1900
+      },
+      {
+        "tMs": 3000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -92,
+        "sampleCount": 2,
+        "lastSeenMs": 2900
+      },
+      {
+        "tMs": 4000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -52,
+        "sampleCount": 2,
+        "lastSeenMs": 3900
+      },
+      {
+        "tMs": 5000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -90,
+        "sampleCount": 2,
+        "lastSeenMs": 4900
+      },
+      {
+        "tMs": 6000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -50,
+        "sampleCount": 2,
+        "lastSeenMs": 5900
+      },
+      {
+        "tMs": 7000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -88,
+        "sampleCount": 2,
+        "lastSeenMs": 6900
+      },
+      {
+        "tMs": 8000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -55,
+        "sampleCount": 2,
+        "lastSeenMs": 7900
+      },
+      {
+        "tMs": 9000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -93,
+        "sampleCount": 2,
+        "lastSeenMs": 8900
+      },
+      {
+        "tMs": 10000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -53,
+        "sampleCount": 2,
+        "lastSeenMs": 9900
+      },
+      {
+        "tMs": 11000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -91,
+        "sampleCount": 2,
+        "lastSeenMs": 10900
+      },
+      {
+        "tMs": 12000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -51,
+        "sampleCount": 2,
+        "lastSeenMs": 11900
+      },
+      {
+        "tMs": 13000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -89,
+        "sampleCount": 2,
+        "lastSeenMs": 12900
+      },
+      {
+        "tMs": 14000,
+        "traceId": "synthetic-spike",
+        "rssiMedianDbm": -49,
+        "sampleCount": 2,
+        "lastSeenMs": 13900
+      },
+      {
+        "tMs": 15000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -94,
+        "sampleCount": 2,
+        "lastSeenMs": 14900
+      },
+      {
+        "tMs": 16000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -54,
+        "sampleCount": 2,
+        "lastSeenMs": 15900
+      },
+      {
+        "tMs": 17000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -92,
+        "sampleCount": 2,
+        "lastSeenMs": 16900
+      },
+      {
+        "tMs": 18000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -52,
+        "sampleCount": 2,
+        "lastSeenMs": 17900
+      },
+      {
+        "tMs": 19000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -90,
+        "sampleCount": 2,
+        "lastSeenMs": 18900
+      },
+      {
+        "tMs": 20000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -50,
+        "sampleCount": 2,
+        "lastSeenMs": 19900
+      },
+      {
+        "tMs": 21000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -88,
+        "sampleCount": 2,
+        "lastSeenMs": 20900
+      },
+      {
+        "tMs": 22000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -55,
+        "sampleCount": 2,
+        "lastSeenMs": 21900
+      },
+      {
+        "tMs": 23000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -93,
+        "sampleCount": 2,
+        "lastSeenMs": 22900
+      },
+      {
+        "tMs": 24000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -53,
+        "sampleCount": 2,
+        "lastSeenMs": 23900
+      },
+      {
+        "tMs": 25000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -91,
+        "sampleCount": 2,
+        "lastSeenMs": 24900
+      },
+      {
+        "tMs": 26000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -51,
+        "sampleCount": 2,
+        "lastSeenMs": 25900
+      },
+      {
+        "tMs": 27000,
+        "traceId": "synthetic-spike",
+        "rssiMedianDbm": -89,
+        "sampleCount": 2,
+        "lastSeenMs": 26900
+      },
+      {
+        "tMs": 28000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -49,
+        "sampleCount": 2,
+        "lastSeenMs": 27900
+      },
+      {
+        "tMs": 29000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -94,
+        "sampleCount": 2,
+        "lastSeenMs": 28900
+      },
+      {
+        "tMs": 30000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -54,
+        "sampleCount": 2,
+        "lastSeenMs": 29900
+      },
+      {
+        "tMs": 31000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -92,
+        "sampleCount": 2,
+        "lastSeenMs": 30900
+      },
+      {
+        "tMs": 32000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -52,
+        "sampleCount": 2,
+        "lastSeenMs": 31900
+      },
+      {
+        "tMs": 33000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -90,
+        "sampleCount": 2,
+        "lastSeenMs": 32900
+      },
+      {
+        "tMs": 34000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -50,
+        "sampleCount": 2,
+        "lastSeenMs": 33900
+      },
+      {
+        "tMs": 35000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -88,
+        "sampleCount": 2,
+        "lastSeenMs": 34900
+      },
+      {
+        "tMs": 36000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -55,
+        "sampleCount": 2,
+        "lastSeenMs": 35900
+      },
+      {
+        "tMs": 37000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -93,
+        "sampleCount": 2,
+        "lastSeenMs": 36900
+      },
+      {
+        "tMs": 38000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -53,
+        "sampleCount": 2,
+        "lastSeenMs": 37900
+      },
+      {
+        "tMs": 39000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -91,
+        "sampleCount": 2,
+        "lastSeenMs": 38900
+      },
+      {
+        "tMs": 40000,
+        "traceId": "synthetic-spike",
+        "rssiMedianDbm": -51,
+        "sampleCount": 2,
+        "lastSeenMs": 39900
+      },
+      {
+        "tMs": 41000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -89,
+        "sampleCount": 2,
+        "lastSeenMs": 40900
+      },
+      {
+        "tMs": 42000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -49,
+        "sampleCount": 2,
+        "lastSeenMs": 41900
+      },
+      {
+        "tMs": 43000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -94,
+        "sampleCount": 2,
+        "lastSeenMs": 42900
+      },
+      {
+        "tMs": 44000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -54,
+        "sampleCount": 2,
+        "lastSeenMs": 43900
+      },
+      {
+        "tMs": 45000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -92,
+        "sampleCount": 2,
+        "lastSeenMs": 44900
+      },
+      {
+        "tMs": 46000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -52,
+        "sampleCount": 2,
+        "lastSeenMs": 45900
+      },
+      {
+        "tMs": 47000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -90,
+        "sampleCount": 2,
+        "lastSeenMs": 46900
+      },
+      {
+        "tMs": 48000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -50,
+        "sampleCount": 2,
+        "lastSeenMs": 47900
+      },
+      {
+        "tMs": 49000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -88,
+        "sampleCount": 2,
+        "lastSeenMs": 48900
+      },
+      {
+        "tMs": 50000,
+        "traceId": "synthetic-unstable",
+        "rssiMedianDbm": -55,
+        "sampleCount": 2,
+        "lastSeenMs": 49900
+      }
+    ],
+    "self": [
+      {
+        "tMs": 0,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 1000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 2000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 3000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.8999999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 4000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 5000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 6000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.7999999999999998,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 7000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 8000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.4,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 9000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.6999999999999997,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 10000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 11000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 12000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.5999999999999996,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 13000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 14000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 15000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 16000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.8,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 17000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 18000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.3999999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 19000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 20000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 21000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 22000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 23000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.8999999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 24000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.199999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 25000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 26000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.8,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 27000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 28000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.4,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 29000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 30000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 31000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          9.299999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 32000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          9.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 33000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          9.9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 34000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          10.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 35000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          10.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 36000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          10.799999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 37000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          11.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 38000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          11.4,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 39000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          11.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 40000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          12,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 41000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          12.299999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 42000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          12.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 43000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          12.9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 44000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          13.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 45000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          13.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 46000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          13.799999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 47000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          14.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 48000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          14.399999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 49000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          14.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 50000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          15,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 51000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          15.299999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 52000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          15.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 53000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          15.899999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 54000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          16.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 55000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          16.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 56000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          16.8,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 57000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          17.099999999999998,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 58000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          17.4,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 59000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          17.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 60000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          18,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      }
+    ],
+    "status": [
+      {
+        "tMs": 0,
+        "state": "recording",
+        "reason": "user_start",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 60000,
+        "state": "finished",
+        "reason": "user_stop",
+        "scanActive": false,
+        "droppedCount": 0
+      }
+    ]
+  }
+}

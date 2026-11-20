@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#070d18" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="description" content="Signal Echoes — 見えない電波の気配を、光の軌跡で再生する。" />
+<title>Signal Echoes — The Invisible, In Motion</title>
+</head>
+<body>
+<div id="app">
+  <div id="scene" role="img" aria-label="光点と自分の移動軌跡を示す合成データの3D再生"></div>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"><span></span></span><span>SIGNAL <strong>ECHOES</strong></span></div>
+    <div class="top-right"><span class="live-mark"><i></i> OFFLINE / LOCAL</span><span id="provenance" class="pill">SYNTHETIC DATA</span></div>
+  </header>
+  <aside class="left-panel">
+    <p class="eyebrow">A DIFFERENT WAY TO REMEMBER A PLACE</p>
+    <h1>The invisible,<br/><em>in motion.</em></h1>
+    <p class="intro">歩いた場所に残された、<br/>目には見えない信号の気配。</p>
+    <div class="divider"></div>
+    <div class="eyebrow">SCENE / シナリオ</div>
+    <label class="select-label" for="scenario">合成シーンを選ぶ</label>
+    <select id="scenario">
+      <option value="flow">01 — CITY FLOW / 行き交う信号</option>
+      <option value="rise">02 — SIGNAL RISE / 強度上昇</option>
+      <option value="gaps">03 — LOST MOMENTS / 記録の空白</option>
+      <option value="quiet">04 — QUIET PATH / 静かな移動</option>
+      <option value="noisy">05 — STATIC / 揺れる電波</option>
+      <option value="indoor">06 — INDOOR / 位置の不確かさ</option>
+    </select>
+    <label class="upload-label" for="file-input"><span aria-hidden="true">↥</span> ローカルJSONを開く</label>
+    <input id="file-input" type="file" accept=".json,application/json" />
+    <p class="local-note">ファイルはブラウザ内で処理され、外部に送信されません。</p>
+  </aside>
+  <aside class="right-panel" aria-live="polite">
+    <div class="panel-heading"><span class="eyebrow">OBSERVATION / 観測状況</span><span class="dot-cluster" aria-hidden="true">⁙</span></div>
+    <div class="main-metric"><span id="active-count">—</span><span>visible<br/>signals</span></div>
+    <div class="meter"><div id="meter-fill"></div></div>
+    <div class="small-caps">現在表示している短期信号</div>
+    <div class="divider"></div>
+    <div class="stat-row"><span>強度上昇</span><strong id="rising-count">—</strong><span class="stat-line up"></span></div>
+    <div class="stat-row"><span>強度下降</span><strong id="falling-count">—</strong><span class="stat-line down"></span></div>
+    <div class="stat-row"><span>継続・変動・不明</span><strong id="other-count">—</strong><span class="stat-line neutral"></span></div>
+    <div class="divider"></div>
+    <div class="substat"><span>自己位置</span><strong id="position-quality">—</strong></div>
+    <div class="substat"><span>受信状況</span><strong id="scan-state">—</strong></div>
+    <div class="substat"><span>表示対象</span><strong id="source-kind">合成データ</strong></div>
+    <div id="error" class="error" role="alert" hidden></div>
+  </aside>
+  <div class="view-switch" role="group" aria-label="視点を切り替える">
+    <button data-view="overview" class="active" aria-pressed="true">俯瞰</button>
+    <button data-view="first" aria-pressed="false">自分視点</button>
+    <button data-view="free" aria-pressed="false">自由視点</button>
+    <button id="reset-camera" title="視点を戻す">↺</button>
+  </div>
+  <footer class="playback">
+    <div class="timeline-top"><span class="eyebrow">TIME / REPLAY</span><span id="session-label">SYNTHETIC CITY FLOW</span><span id="clock">00:00 / 00:00</span></div>
+    <div id="timeline-heat" class="timeline-heat" aria-hidden="true"></div>
+    <input id="timeline" type="range" min="0" max="180000" value="60000" step="100" aria-label="再生位置" />
+    <div class="playbar">
+      <div class="player-actions">
+        <button id="restart" aria-label="最初に戻す" title="最初に戻す">↺</button>
+        <button id="play" class="play-button" aria-label="再生または一時停止">▶</button>
+        <button id="step" aria-label="10秒進む" title="10秒進む">↦</button>
+        <span id="playing-state">PAUSED</span>
+      </div>
+      <div class="playbar-right"><label for="speed" class="eyebrow">SPEED</label>
+        <select id="speed" aria-label="再生速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></div>
+    </div>
+    <div class="disclaimer"><span class="caution-mark">i</span><span>光点の位置と動きは演出です。<strong>実際の人物の位置や人数を示すものではありません。</strong> 信号強度から方向・距離・同行関係は判定できません。</span></div>
+  </footer>
+  <div id="fallback" class="fallback" hidden><h2>3D表示を利用できません</h2><p>この環境ではWebGLが利用できません。信号の時系列は上部の観測パネルで確認できます。</p></div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

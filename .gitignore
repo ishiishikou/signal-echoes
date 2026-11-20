@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.cache/
+playwright-report/
+test-results/
+.env*
+*.p12
+*.ipa
+*.mobileprovision
+raw/
+measured/
+private/
+captures/
+exports/
+*.log
+*.exit
+sol-advice*

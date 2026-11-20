@@ -6,7 +6,7 @@
 
 ## ステータス
 
-2026-11-20現在、技術調査と設計段階です。アプリは未実装で、実機収集・精度・電池消費・使い心地は未検証です。この文書群は実装計画であり、動作済みのアプリや配布物ではありません。
+2026-11-20現在、Web側のM0合成再生デモをfeatureブランチで実装・自動検証しています。iPhoneの実機収集、精度、電池消費、本人の体験評価は未検証です。本成果は合成データの試作であり、実測対応アプリや配布物ではありません。
 
 最初にWindows/WSL2とPCブラウザで合成データの3D再生を作り、その後、利用可能なMac・Xcode・iPhoneで短時間の記録を検証する予定です。iOSのビルド・署名・実機実行をWindowsだけで完結できるとは想定していません。実機への導入には本人の端末操作が必要です。
 
@@ -37,10 +37,27 @@ Publicリポジトリに含めるデータは、独立生成した合成デー�
 | [未確認事項](05-open-questions.md) | 設計判断、実機の確認事項、Windows中心のビルド経路 |
 | [引継ぎ監査](06-handoff-audit.md) | 文書検査と未検証事項、後続実装の完了判定 |
 
-次の実装項目は、データ契約と合成fixture、光点の最小再生、時間操作と3視点です。詳しい開始手順は実装ロードマップにあります。まだ`npm run dev`で起動できるコードはありません。
+次の実装項目は、データ契約と合成fixture、光点の最小再生、時間操作と3視点です。詳しい開始手順は実装ロードマップにあります。featureブランチには起動可能なM0 Webデモが含まれます。
 
 ## 技術的な根拠
 
 BLEの受信条件・背景制約は [AppleのスキャンAPI](https://developer.apple.com/documentation/corebluetooth/cbcentralmanager/scanforperipherals%28withservices%3Aoptions%3A%29) と [Core Bluetoothの背景処理ガイド](https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/CoreBluetoothBackgroundProcessingForIOSApps/PerformingTasksWhileYourAppIsInTheBackground.html)、iOS開発環境は [Xcodeの対応表](https://developer.apple.com/xcode/system-requirements) を参照しています。確認日: 2026-11-20。具体的な端末での成立性は今後の実機試験で確認します。
 
 公開・配布・ライセンスの方針は今後決定します。公開リポジトリであること自体を、実測データの公開やアプリ配布の許可とは扱いません。
+## M0 合成デモの起動（featureブランチ）
+
+Node.js 24・npmが使えるWindows/WSL2またはLinux PCで、リポジトリのルートから実行します。
+
+```bash
+npm ci
+npm run fixtures
+npm run typecheck
+npm test
+npm run build
+npm run check:public-data
+npm run dev
+```
+
+表示先: `http://127.0.0.1:5173/`。外部ホスティングや新規アカウントは不要です。俯瞰・自分視点・自由視点、再生・シーク、6つの合成シナリオ、ローカルJSONインポートを備えています。スクリーンショットは `docs/validation/` 以下の合成データのみを使用しています。
+
+Chrome/Chromiumによる操作スモークテスト: `npx tsx scripts/smoke-test.ts`（`/usr/bin/chromium`があるLinux環境の例）。GUI/動画品質は本人が確認して評価します。現段階でiPhoneのBluetoothを収集する機能はありません。
