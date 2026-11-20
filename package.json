@@ -1,0 +1,32 @@
+{
+  "name": "signal-echoes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/viewer",
+    "packages/core"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @signal-echoes/viewer",
+    "build": "npm run build -w @signal-echoes/viewer",
+    "typecheck": "tsc -p packages/core/tsconfig.json --noEmit && tsc -p apps/viewer/tsconfig.json --noEmit",
+    "test": "vitest run",
+    "fixtures": "tsx scripts/generate-fixtures.ts",
+    "check:public-data": "tsx scripts/check-public-data.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "three": "0.187.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/node": "26.6.6",
+    "@types/three": "0.187.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.1"
+  }
+}

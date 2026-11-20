@@ -1,0 +1,143 @@
+{
+  "schema": "signal-echoes.session",
+  "version": 1,
+  "provenance": "synthetic",
+  "sessionId": "demo-rise-001",
+  "durationMs": 10000,
+  "coordinateFrame": "local-east-up-south-m",
+  "seed": 42,
+  "capture": {
+    "mode": "synthetic",
+    "serviceFilter": "none",
+    "binMs": 1000,
+    "completion": "complete"
+  },
+  "observations": {
+    "ble": [
+      {
+        "tMs": 1000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -80,
+        "sampleCount": 3,
+        "lastSeenMs": 900
+      },
+      {
+        "tMs": 2000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -79,
+        "sampleCount": 3,
+        "lastSeenMs": 1900
+      },
+      {
+        "tMs": 3000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -78,
+        "sampleCount": 3,
+        "lastSeenMs": 2900
+      },
+      {
+        "tMs": 4000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -77,
+        "sampleCount": 3,
+        "lastSeenMs": 3900
+      },
+      {
+        "tMs": 5000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -76,
+        "sampleCount": 3,
+        "lastSeenMs": 4900
+      },
+      {
+        "tMs": 6000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -75,
+        "sampleCount": 3,
+        "lastSeenMs": 5900
+      },
+      {
+        "tMs": 7000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -74,
+        "sampleCount": 3,
+        "lastSeenMs": 6900
+      },
+      {
+        "tMs": 8000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -73,
+        "sampleCount": 3,
+        "lastSeenMs": 7900
+      },
+      {
+        "tMs": 9000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -72,
+        "sampleCount": 3,
+        "lastSeenMs": 8900
+      },
+      {
+        "tMs": 10000,
+        "traceId": "demo-a",
+        "rssiMedianDbm": -71,
+        "sampleCount": 3,
+        "lastSeenMs": 9900
+      }
+    ],
+    "self": [
+      {
+        "tMs": 1000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 10000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      }
+    ],
+    "status": [
+      {
+        "tMs": 0,
+        "state": "recording",
+        "reason": "user_start",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 10000,
+        "state": "finished",
+        "reason": "user_stop",
+        "scanActive": false,
+        "droppedCount": 0
+      }
+    ]
+  }
+}

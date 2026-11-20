@@ -1,0 +1,1547 @@
+{
+  "schema": "signal-echoes.session",
+  "version": 1,
+  "provenance": "synthetic",
+  "sessionId": "demo-quiet-001",
+  "durationMs": 60000,
+  "coordinateFrame": "local-east-up-south-m",
+  "seed": 11,
+  "capture": {
+    "mode": "synthetic",
+    "serviceFilter": "none",
+    "binMs": 1000,
+    "completion": "complete"
+  },
+  "observations": {
+    "ble": [],
+    "self": [
+      {
+        "tMs": 0,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 1000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.15,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 2000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 3000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.44999999999999996,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 4000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 5000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.75,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 6000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          0.8999999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 7000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.05,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 8000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 9000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.3499999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 10000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 11000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.65,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 12000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.7999999999999998,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 13000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          1.95,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 14000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 15000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.25,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 16000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.4,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 17000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.55,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 18000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.6999999999999997,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 19000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          2.85,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 20000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 21000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.15,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 22000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 23000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.4499999999999997,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 24000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.5999999999999996,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 25000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.75,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 26000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          3.9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 27000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.05,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 28000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.2,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 29000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.35,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 30000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 31000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.6499999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 32000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.8,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 33000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          4.95,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 34000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 35000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.25,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 36000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.3999999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 37000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.55,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 38000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 39000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          5.85,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 40000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 41000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.1499999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 42000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.3,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 43000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.45,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 44000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.6,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 45000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.75,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 46000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          6.8999999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 47000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.05,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 48000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.199999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 49000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.35,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 50000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.5,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 51000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.6499999999999995,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 52000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.8,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 53000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          7.949999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 54000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.1,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 55000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.25,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 56000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.4,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 57000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.549999999999999,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 58000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.7,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 59000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          8.85,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      },
+      {
+        "tMs": 60000,
+        "segmentId": "synthetic-route",
+        "source": "synthetic",
+        "positionM": [
+          9,
+          0,
+          0
+        ],
+        "horizontalAccuracyM": 5,
+        "ageMs": 0,
+        "quality": "usable",
+        "headingDeg": 90,
+        "headingAccuracyDeg": 10,
+        "stepsDelta": 1,
+        "stepsIntervalMs": 1000,
+        "floor": null
+      }
+    ],
+    "status": [
+      {
+        "tMs": 0,
+        "state": "recording",
+        "reason": "user_start",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 1000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 2000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 3000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 4000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 5000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 6000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 7000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 8000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 9000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 10000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 11000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 12000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 13000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 14000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 15000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 16000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 17000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 18000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 19000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 20000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 21000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 22000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 23000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 24000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 25000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 26000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 27000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 28000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 29000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 30000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 31000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 32000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 33000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 34000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 35000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 36000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 37000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 38000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 39000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 40000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 41000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 42000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 43000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 44000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 45000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 46000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 47000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 48000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 49000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 50000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 51000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 52000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 53000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 54000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 55000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 56000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 57000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 58000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 59000,
+        "state": "recording",
+        "reason": "heartbeat",
+        "scanActive": true,
+        "droppedCount": 0
+      },
+      {
+        "tMs": 60000,
+        "state": "finished",
+        "reason": "user_stop",
+        "scanActive": false,
+        "droppedCount": 0
+      }
+    ]
+  }
+}

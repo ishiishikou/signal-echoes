@@ -1,0 +1,47 @@
+{
+  "generator": "synthetic-v1",
+  "fixtures": [
+    {
+      "name": "rise",
+      "sha256": "3f5cf212b2727b75d99caec22701328c27cadbf11769767a4707068ecf9333fe",
+      "durationMs": 10000,
+      "bleBins": 10,
+      "seed": 42
+    },
+    {
+      "name": "quiet",
+      "sha256": "8a12e67ad23280260da6625b532a4c4d7460326cbe160150e3d6b1d79fe08874",
+      "durationMs": 60000,
+      "bleBins": 0,
+      "seed": 11
+    },
+    {
+      "name": "flow",
+      "sha256": "cf2293370f4953b0a553a74932a780cd8f9c1b61784eebda06d1a9e2141f3126",
+      "durationMs": 180000,
+      "bleBins": 4460,
+      "seed": 2031
+    },
+    {
+      "name": "gaps",
+      "sha256": "26b3244f48bacc80b1c75d6f49861212596e0b7b2ea481ea87f8cdef04487bb5",
+      "durationMs": 60000,
+      "bleBins": 20,
+      "seed": 71
+    },
+    {
+      "name": "noisy",
+      "sha256": "a9fc9c6904259685cfe33e7a7aecc051e449244cdc8d366aef8247fc51194c9e",
+      "durationMs": 60000,
+      "bleBins": 50,
+      "seed": 37
+    },
+    {
+      "name": "indoor",
+      "sha256": "3d6673411c093dea5d0768003befaee6486c33c4769414afcbc3091467cfe0f1",
+      "durationMs": 60000,
+      "bleBins": 817,
+      "seed": 8
+    }
+  ]
+}
