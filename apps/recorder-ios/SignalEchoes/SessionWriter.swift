@@ -44,7 +44,7 @@ final class SessionWriter {
     }
 
     func begin(sessionId: String, seed: UInt32) throws {
-        close()
+        try close()
         recordCount = 0
         byteCount = 0
         let path = directory.appendingPathComponent(sessionId + ".ndjson")
@@ -62,8 +62,13 @@ final class SessionWriter {
         guard let handle else { throw StorageError.noJournal }
         var data = try JSONEncoder().encode(record)
         data.append(0x0A)
-        guard byteCount + data.count <= RecordingPolicy.maxFileBytes,
-              recordCount < RecordingPolicy.maxRecords else { throw StorageError.limitExceeded }
+        let terminal = record.status?.state == "finished" || record.status?.state == "interrupted"
+        let reserveBytes = terminal ? 0 : 4096
+        let reserveRecords = terminal ? 0 : 1
+        guard byteCount + data.count <= RecordingPolicy.maxFileBytes - reserveBytes,
+              recordCount < RecordingPolicy.maxRecords - reserveRecords else {
+            throw StorageError.limitExceeded
+        }
         try handle.write(contentsOf: data)
         byteCount += data.count
         recordCount += 1
@@ -78,11 +83,20 @@ final class SessionWriter {
     func add(_ event: StatusEvent) throws {
         try append(JournalRecord(kind: "status", status: event))
     }
-    func flush() { try? handle?.synchronize() }
-    func close() {
-        try? handle?.synchronize()
-        try? handle?.close()
-        handle = nil
+    func flush() throws {
+        guard let handle else { throw StorageError.noJournal }
+        try handle.synchronize()
+    }
+    func close() throws {
+        guard let handle else { return }
+        defer { self.handle = nil }
+        do {
+            try handle.synchronize()
+            try handle.close()
+        } catch {
+            try? handle.close()
+            throw error
+        }
     }
 
     /// プロセスが不意に終了した場合、改行完了済みの記録だけを復旧する。
@@ -91,13 +105,22 @@ final class SessionWriter {
         guard let entries = try? FileManager.default.contentsOfDirectory(at: directory,
                 includingPropertiesForKeys: nil) else { return }
         for url in entries where url.pathExtension == "ndjson" && url != journalURL {
+            let finished = url.deletingPathExtension().appendingPathExtension("json")
+            // atomicな完成済みJSONがある場合、古いジャーナルで上書きしない。
+            if let bytes = try? Data(contentsOf: finished),
+               let object = (try? JSONSerialization.jsonObject(with: bytes)) as? [String: Any],
+               object["schema"] as? String == "signal-echoes.session",
+               object["version"] as? Int == 1 {
+                try? FileManager.default.removeItem(at: url)
+                continue
+            }
             _ = try? finalize(url: url, durationMs: nil, completion: "interrupted")
         }
     }
 
     @discardableResult
     func finish(durationMs: Int, completion: String) throws -> URL {
-        close()
+        try close()
         guard let url = journalURL else { throw StorageError.noJournal }
         defer { journalURL = nil }
         return try finalize(url: url, durationMs: durationMs, completion: completion)
@@ -132,8 +155,18 @@ final class SessionWriter {
         guard let header else { throw StorageError.invalidData }
         let total = min(RecordingPolicy.maxDurationMs, max(durationMs ?? maxTime, maxTime))
         if completion == "interrupted" {
-            observations.status.append(StatusEvent(tMs: total, state: "interrupted",
-                reason: "recovered_interruption", scanActive: false, droppedCount: 0))
+            // 通常の中断は既に終端イベントを持つ。復旧時だけ不足分を補う。
+            if let lastEnd = observations.status.lastIndex(where: {
+                $0.state == "finished" || $0.state == "interrupted"
+            }), observations.status[lastEnd].state == "finished" {
+                observations.status.remove(at: lastEnd)
+            }
+            if !observations.status.contains(where: { $0.state == "interrupted" }) {
+                observations.status.append(StatusEvent(tMs: total, state: "interrupted",
+                    reason: "recovered_interruption", scanActive: false, droppedCount: 0))
+            }
+        } else if !observations.status.contains(where: { $0.state == "finished" }) {
+            throw StorageError.invalidData
         }
         // Session V1の時系列を正規化する。
         observations.ble.sort { $0.tMs < $1.tMs }

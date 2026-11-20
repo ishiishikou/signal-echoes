@@ -27,6 +27,7 @@ final class SessionController: ObservableObject {
     private var storedBins = 0
 
     init() {
+        SessionExporter.shared.purge() // 前回の一時共有用コピーは再利用しない
         writer.recoverPending()
         refreshFiles()
     }
@@ -109,8 +110,8 @@ final class SessionController: ObservableObject {
     }
 
     private func flushBoundary(_ end: Int) throws {
-        let perTrace = pending.removeValue(forKey: end) ?? [:]
-        let lastTimes = lastSeenByBin.removeValue(forKey: end) ?? [:]
+        let perTrace = pending[end] ?? [:]
+        let lastTimes = lastSeenByBin[end] ?? [:]
         for (traceId, values) in perTrace.sorted(by: { $0.key < $1.key }) {
             guard let last = lastTimes[traceId], !values.isEmpty else { continue }
             try writer.add(BleBin(tMs: end, traceId: traceId, rssiMedianDbm: RecordingPolicy.median(values),
@@ -123,6 +124,9 @@ final class SessionController: ObservableObject {
         positionLabel = sample.quality == "usable" ? "位置記録中" :
                        sample.quality == "coarse" ? "位置精度が低い" : "位置情報なし"
         try writer.add(sample)
+        // 永続化に成功した分のメモリだけを消す。
+        pending.removeValue(forKey: end)
+        lastSeenByBin.removeValue(forKey: end)
     }
 
     private func tick() {
@@ -138,7 +142,7 @@ final class SessionController: ObservableObject {
                 lastStatusAt = elapsed
                 try writer.add(StatusEvent(tMs: elapsed, state: "recording",
                    reason: "heartbeat", scanActive: scanner.isScanning, droppedCount: 0))
-                writer.flush()
+                try writer.flush()
             }
         } catch {
             errorText = error.localizedDescription
@@ -165,15 +169,20 @@ final class SessionController: ObservableObject {
         let end = elapsedMs()
         timer?.invalidate()
         timer = nil
-        // 残っている完全な1秒ビンのみを確定する。
+        // 書き込み失敗が起きたセッションを正常完了として確定させない。
+        var writeFailed = false
         do {
             while nextBoundary <= end {
                 try flushBoundary(nextBoundary)
                 nextBoundary += 1000
             }
+            let incompleteCallbacks = pending.values.reduce(0) {
+                $0 + $1.values.reduce(0) { $0 + $1.count }
+            }
             try writer.add(StatusEvent(tMs: end, state: interrupted ? "interrupted" : "finished",
-                reason: reason, scanActive: false, droppedCount: 0))
+                reason: reason, scanActive: false, droppedCount: incompleteCallbacks))
         } catch {
+            writeFailed = true
             errorText = error.localizedDescription
         }
         scanner.stop()
@@ -183,8 +192,10 @@ final class SessionController: ObservableObject {
         pending.removeAll()
         lastSeenByBin.removeAll()
         do {
-            _ = try writer.finish(durationMs: end, completion: interrupted ? "interrupted" : "complete")
-            statusLabel = interrupted ? "記録は中断され、可能な範囲で保存しました。" : "記録を保存しました。"
+            let incomplete = interrupted || writeFailed
+            _ = try writer.finish(durationMs: end, completion: incomplete ? "interrupted" : "complete")
+            statusLabel = incomplete ? "記録は中断され、可能な範囲で保存しました。" :
+                "記録を保存しました。最後の端数秒の観測は対象外です。"
         } catch {
             errorText = "記録の保存に失敗しました: " + error.localizedDescription
             statusLabel = "保存失敗。再起動後の復旧を試してください。"
@@ -193,6 +204,7 @@ final class SessionController: ObservableObject {
     }
 
     func prepareShare(_ url: URL) {
+        shareURL = nil
         do { shareURL = try SessionExporter.shared.prepare(url) }
         catch { errorText = error.localizedDescription }
     }
@@ -200,6 +212,7 @@ final class SessionController: ObservableObject {
         do {
             try writer.delete(url)
             shareURL = nil
+            SessionExporter.shared.purge()
             refreshFiles()
         } catch { errorText = error.localizedDescription }
     }

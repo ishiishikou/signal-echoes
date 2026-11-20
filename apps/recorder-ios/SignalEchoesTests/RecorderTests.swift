@@ -59,4 +59,38 @@ final class RecorderTests: XCTestCase {
         for forbidden in ["latitude", "longitude", "manufacturerData", "advertisementData",
                           "macAddress", "deviceName"] { XCTAssertFalse(string.contains(forbidden)) }
     }
+
+
+    func testInterruptedWriterPreservesOneTerminalEvent() throws {
+        let writer = SessionWriter.shared
+        let id = "synthetic-test-" + UUID().uuidString
+        try writer.begin(sessionId: id, seed: 42)
+        try writer.add(StatusEvent(tMs: 0, state: "recording", reason: "user_start",
+                                   scanActive: true, droppedCount: 0))
+        try writer.add(StatusEvent(tMs: 1000, state: "interrupted", reason: "app_inactive",
+                                   scanActive: false, droppedCount: 3))
+        let url = try writer.finish(durationMs: 1000, completion: "interrupted")
+        defer { try? writer.delete(url) }
+        let data = try Data(contentsOf: url)
+        let session = try JSONDecoder().decode(SessionV1.self, from: data)
+        let terminal = session.observations.status.filter { $0.state == "interrupted" }
+        XCTAssertEqual(terminal.count, 1)
+        XCTAssertEqual(terminal.first?.reason, "app_inactive")
+        XCTAssertEqual(terminal.first?.droppedCount, 3)
+        XCTAssertEqual(session.capture.completion, "interrupted")
+    }
+
+    func testWriterRecoversMissingTerminalEvent() throws {
+        let writer = SessionWriter.shared
+        let id = "synthetic-test-" + UUID().uuidString
+        try writer.begin(sessionId: id, seed: 43)
+        try writer.add(StatusEvent(tMs: 0, state: "recording", reason: "user_start",
+                                   scanActive: true, droppedCount: 0))
+        let url = try writer.finish(durationMs: 1000, completion: "interrupted")
+        defer { try? writer.delete(url) }
+        let session = try JSONDecoder().decode(SessionV1.self, from: Data(contentsOf: url))
+        let terminal = session.observations.status.filter { $0.state == "interrupted" }
+        XCTAssertEqual(terminal.count, 1)
+        XCTAssertEqual(terminal.first?.reason, "recovered_interruption")
+    }
 }

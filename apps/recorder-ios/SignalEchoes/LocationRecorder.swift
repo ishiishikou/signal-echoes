@@ -9,6 +9,7 @@ final class LocationRecorder: NSObject, CLLocationManagerDelegate {
     private var lastUsable: (position: [Double], tMs: Int, accuracy: Double)?
     private var segment = 0
     private var onStatus: ((String) -> Void)?
+    private var isActive = false
     var currentSegment: String { "segment-\(segment)" }
 
     override init() {
@@ -19,6 +20,7 @@ final class LocationRecorder: NSObject, CLLocationManagerDelegate {
     }
 
     func start(status: @escaping (String) -> Void) {
+        isActive = true
         onStatus = status
         latest = nil
         heading = nil
@@ -31,6 +33,7 @@ final class LocationRecorder: NSObject, CLLocationManagerDelegate {
     }
 
     private func beginIfAuthorized() {
+        guard isActive else { return }
         switch manager.authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse:
             manager.startUpdatingLocation()
@@ -41,8 +44,13 @@ final class LocationRecorder: NSObject, CLLocationManagerDelegate {
     }
 
     func stop() {
+        isActive = false
         manager.stopUpdatingLocation()
         manager.stopUpdatingHeading()
+        latest = nil
+        heading = nil
+        origin = nil
+        lastUsable = nil
         onStatus = nil
     }
 
@@ -84,6 +92,7 @@ final class LocationRecorder: NSObject, CLLocationManagerDelegate {
                     if distance > max(15 * gap, previous.accuracy + accuracy + 5) || hypot(east, south) > 2_000 {
                         segment += 1
                         self.origin = location.coordinate
+                        lastUsable = nil // 新しい座標系へ旧基準を持ち越さない
                         p = [0, 0, 0]
                     } else { p = candidate }
                 } else { p = candidate }

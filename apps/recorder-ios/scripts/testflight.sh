@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+umask 077
 
 for key in APPLE_TEAM_ID IOS_BUNDLE_ID APPLE_CERTIFICATE_P12_BASE64 APPLE_CERTIFICATE_PASSWORD APPLE_PROFILE_BASE64 APPSTORE_API_KEY_ID APPSTORE_API_ISSUER_ID APPSTORE_API_PRIVATE_KEY_BASE64; do
   if [ -z "$(printenv "$key")" ]; then
@@ -13,10 +14,12 @@ WORK="$RUNNER_TEMP/signal-echoes-signing"
 mkdir -p "$WORK" "$HOME/Library/MobileDevice/Provisioning Profiles" "$HOME/.appstoreconnect/private_keys"
 chmod 700 "$WORK"
 KEYCHAIN="$WORK/app-signing.keychain-db"
+PROFILE_DEST=""
 API_KEY_FILE="$HOME/.appstoreconnect/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8"
 cleanup() {
   security delete-keychain "$KEYCHAIN" 2>/dev/null || true
   rm -rf "$WORK"
+  if [ -n "$PROFILE_DEST" ]; then rm -f "$PROFILE_DEST"; fi
   rm -f "$API_KEY_FILE"
 }
 trap cleanup EXIT
@@ -28,13 +31,14 @@ chmod 600 "$WORK/distribution.p12" "$WORK/profile.mobileprovision" "$API_KEY_FIL
 security cms -D -i "$WORK/profile.mobileprovision" > "$WORK/profile.plist"
 PROFILE_UUID="$(/usr/libexec/PlistBuddy -c 'Print :UUID' "$WORK/profile.plist")"
 PROFILE_NAME="$(/usr/libexec/PlistBuddy -c 'Print :Name' "$WORK/profile.plist")"
-cp "$WORK/profile.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
+PROFILE_DEST="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
+cp "$WORK/profile.mobileprovision" "$PROFILE_DEST"
 
 KEYCHAIN_PASSWORD="$(openssl rand -base64 32)"
 security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
 security set-keychain-settings -lut 21600 "$KEYCHAIN"
 security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
-security import "$WORK/distribution.p12" -P "$APPLE_CERTIFICATE_PASSWORD" -t cert -f pkcs12 -k "$KEYCHAIN" -A
+security import "$WORK/distribution.p12" -P "$APPLE_CERTIFICATE_PASSWORD" -t cert -f pkcs12 -k "$KEYCHAIN"
 security list-keychains -d user -s "$KEYCHAIN"
 security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
 
@@ -57,6 +61,7 @@ with open(path,"wb") as f:
                    "signingStyle":"manual","teamID":team,
                    "provisioningProfiles":{bundle:profile}},f)
 PY
+codesign --verify --deep --strict --verbose=2 "$WORK/SignalEchoes.xcarchive/Products/Applications/SignalEchoes.app"
 xcodebuild -exportArchive -archivePath "$WORK/SignalEchoes.xcarchive" \
   -exportOptionsPlist "$WORK/ExportOptions.plist" \
   -exportPath "$WORK/Exported" -quiet

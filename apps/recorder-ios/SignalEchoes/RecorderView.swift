@@ -118,6 +118,8 @@ struct RecorderView: View {
             Text(recorder.statusLabel).font(.system(size: 11))
                 .foregroundStyle(Palette.secondary)
                 .fixedSize(horizontal: false, vertical: true)
+            Text("初回のアクセス許可で記録が中断された場合は、許可後にもう一度開始してください。")
+                .font(.system(size: 10)).foregroundStyle(Palette.secondary)
         }
         .padding(22)
         .background(Palette.card, in: RoundedRectangle(cornerRadius: 18))

@@ -72,6 +72,13 @@ jobs:
             -parallel-testing-enabled NO \
             CODE_SIGNING_ALLOWED=NO \
             -quiet
+      - name: Verify Swift JSON against M0 strict schema
+        run: |
+          set -euo pipefail
+          swiftc apps/recorder-ios/SignalEchoes/Models.swift apps/recorder-ios/scripts/emit-sample.swift -o "$RUNNER_TEMP/emit-ios-session"
+          "$RUNNER_TEMP/emit-ios-session" > "$RUNNER_TEMP/ios-synthetic-session.json"
+          npm ci
+          npx tsx scripts/validate-ios-export.ts "$RUNNER_TEMP/ios-synthetic-session.json"
       - name: Check no private signing/data files in tree
         run: |
           set -euo pipefail
